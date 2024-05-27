@@ -2,6 +2,9 @@
 
 ## Requirements
 
+The program is tested with **g++ (GCC) 14.1.1 20240522**.
+Please **upgrade** when necessary or use the contained **setup-docker.sh**.
+
 The python script require **pandas** and **matplotlib**.
 Run **setup.sh** (Mac/Linux) or **setup.ps1** (Windows).
 Please select the virtual environment as interpreter.
