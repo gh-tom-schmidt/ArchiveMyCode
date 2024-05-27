@@ -54,19 +54,28 @@ void p_b(Vector &x, Vector &y, Matrix &A, int n, int m, int num_threads)
 
 void p_c(Vector &x, Vector &y, Matrix &A, int n, int m, int num_threads)
 {
-    // Set the number of threads
     omp_set_num_threads(num_threads);
 
     y[0] = 0;
-    for (int i = 1; i < m; i++)
+
+#pragma omp parallel shared(x, y, A, n, m)
     {
-        y[i] = y[i - 1];
-        for (int j = 0; j < n; j++)
+        for (int i = 1; i < m; i++)
         {
-            y[i] = y[i] + A[i][j] * x[j];
+            double temp = y[i - 1];
+#pragma omp for
+            for (int j = 0; j < n; j++)
+            {
+                temp += A[i][j] * x[j];
+            }
+#pragma omp critical
+            {
+                y[i] = temp;
+            }
         }
     }
 }
+
 // ------------------------ Serial ---------------------------
 
 void s_a(Vector &x, Vector &y, Matrix &A, int n, int m)
