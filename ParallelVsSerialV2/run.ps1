@@ -5,7 +5,7 @@ Write-Host "Step 2: Running make file..."
 make
 
 Write-Host "Step 2: Running ./main with 1000 10 1000 12"
-.\main.exe 1000 10 1000 12 "..\Output\tmt.out"
+.\main.exe 1000 9 1000 12 "..\Output\tmt.out"
 
 Write-Host "Step 3: Run make clean"
 make clean

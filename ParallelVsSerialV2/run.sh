@@ -7,7 +7,7 @@ echo "Step 2: Running make file..."
 make
 
 echo "Step 2: Running ./main with 1000 10 1000 12"
-./main 1000 10 1000 12 "../Output/tmt.out"
+./main 1000 9 1000 12 "../Output/tmt.out"
 
 # Step 3: Run make clean
 echo "Step 3: Running make clean..."

@@ -12,3 +12,10 @@ Please select the virtual environment as interpreter.
 ## Run with Defaults
 
 Run **run.sh** (Mac/Linux) and **run.ps1** (Windows)
+
+## Output
+
+The Output can be found in the **./Output/** folder.
+It contains **some** examples as plots and a list of **all** measured values.
+
+(_Note_: If using Docker, please remember to copy the output to your host system.)
