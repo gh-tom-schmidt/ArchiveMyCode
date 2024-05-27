@@ -72,14 +72,14 @@ data.draw('s_a', 'p_a', 'p', 'Time/s', 1000, 9000)
 data.draw('s_b', 'p_b', 'p', 'Time/s', 1000, 9000)
 data.draw('s_c', 'p_c', 'p', 'Time/s', 1000, 9000)
 
-data.save("../Output/n_1000-m_10000.png")
+data.save("../Output/n_1000-m_9000.png")
 data.reset()
 
 data.draw('s_a', 'p_a', 'p', 'Time/s', 9000, 1000)
 data.draw('s_b', 'p_b', 'p', 'Time/s', 9000, 1000)
 data.draw('s_c', 'p_c', 'p', 'Time/s', 9000, 1000)
 
-data.save("../Output/n_1000-m_1000.png")
+data.save("../Output/n_9000-m_1000.png")
 
 data.reset()
 
@@ -95,7 +95,7 @@ data.draw('s_a', 'p_a', 'p', 'Time/s', 3000, 7000)
 data.draw('s_b', 'p_b', 'p', 'Time/s', 3000, 7000)
 data.draw('s_c', 'p_c', 'p', 'Time/s', 3000, 7000)
 
-data.save("../Output/n_5000-m_5000.png")
+data.save("../Output/n_3000-m_7000.png")
 
 data.reset()
 
@@ -103,4 +103,4 @@ data.draw('s_a', 'p_a', 'p', 'Time/s', 7000, 3000)
 data.draw('s_b', 'p_b', 'p', 'Time/s', 7000, 3000)
 data.draw('s_c', 'p_c', 'p', 'Time/s', 7000, 3000)
 
-data.save("../Output/n_5000-m_5000.png")
+data.save("../Output/n_7000-m_3000.png")
