@@ -1,6 +1,6 @@
 CXX = g++ # compiler
 
-CXXFLAGS = -Wall -g # flags
+CXXFLAGS = -Wall -g -fopenmp # flags
 
 TARGET = main # executable
 

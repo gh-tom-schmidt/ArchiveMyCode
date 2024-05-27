@@ -20,9 +20,9 @@ private:
     ofstream outFile;
 
 public:
-    TimeMapTool()
+    TimeMapTool(char *filename)
     {
-        outFile.open("tmt.out", ios::out | ios::trunc); // open file in append mode
+        outFile.open(filename, ios::out | ios::trunc); // open file in append mode
     }
 
     ~TimeMapTool()
