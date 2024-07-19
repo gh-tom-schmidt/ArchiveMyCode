@@ -9,6 +9,14 @@
 			"envFile": "",
 			"envName": ""
 		}
-	}
-}
 
+	},
+	"postCreateCommand": "micromamba install xeus-cling -c conda-forge -y",
+	"extensions": [
+		"ms-python.python",       // Python extension
+		"ms-toolsai.jupyter",     // Jupyter extension
+		"ms-vscode.cpptools",     // C/C++ extension
+		"ms-azuretools.vscode-docker" // Docker extension
+	]
+
+}
