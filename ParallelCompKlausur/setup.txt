@@ -1,0 +1,21 @@
+1. Past the following to the gh codespace devcontainer:
+
+    {
+        "image": "mcr.microsoft.com/devcontainers/universal:2",
+        "features": {
+            "ghcr.io/mamba-org/devcontainer-features/micromamba:1": {
+                "autoActivate": true,
+                "version": "latest",
+                "channels": "conda-forge",
+                "packages": "",
+                "envFile": "",
+                "envName": ""
+            }
+        }
+    }
+
+1.5 The mamba env should be "base" and active
+
+2. Run: $ micromamba install xeus-cling -c conda-forge
+
+3. Select the kernel: Menu top right -> "Select Kernel" -> "Jupiter Kernel..."
