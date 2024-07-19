@@ -16,7 +16,8 @@
 		"ms-python.python",       // Python extension
 		"ms-toolsai.jupyter",     // Jupyter extension
 		"ms-vscode.cpptools",     // C/C++ extension
-		"ms-azuretools.vscode-docker" // Docker extension
+		"ms-azuretools.vscode-docker", // Docker extension
+		"ms-vscode.cpptools-extension-pack" // C/C++ Extension Pack
 	]
 
 }
