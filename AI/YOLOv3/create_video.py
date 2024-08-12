@@ -1,4 +1,4 @@
-# python create_video.py "Data/Input/FarCry_11-08.mp4" "Results" "Trained/best.pt"
+# python create_video.py "Data/Input/V2.mp4" "Results" "Trained/best.pt"
 from ultralytics import YOLO
 import cv2
 import argparse
