@@ -1,0 +1,20 @@
+# using torch 2.2.2 to solve an error / bug with an .dll file on windows
+# therefore, numpy needs to be <2 and cuda 12.1
+# therefore, cuda toolkit needs to be installed with version 12.1
+# and torch needs to be installed after cuda was installed 
+numpy==1.26.4
+torch==2.2.2 --index-url https://download.pytorch.org/whl/cu121
+torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cu121
+torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121
+#
+opencv-python
+matplotlib
+#
+tqdm
+pandas
+plotly
+#
+# Usefull commands
+# pip --no-cache-dir install -r requirements.txt
+# pip install --upgrade --force-reinstall <package>
+# pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121
