@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="420.0" style="-fx-background-color: #2b2d36;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane layoutX="67.0">
+            <children>
+                <Label alignment="CENTER" layoutX="104.0" layoutY="170.0" prefHeight="63.0" prefWidth="211.0" text="Registration" textFill="#b8cdd7" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="username" layoutX="123.0" layoutY="243.0" prefHeight="35.0" prefWidth="174.0" promptText="Username" style="-fx-background-color: #3a3c4a; -fx-text-fill: #b8cdd7; -fx-prompt-text-fill: #b8cdd7;">
+                    <font>
+                        <Font name="Calibri" size="16.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="proccessRegistration" alignment="CENTER" contentDisplay="TOP" layoutX="153.0" layoutY="387.0" mnemonicParsing="false" onAction="#handleRegisteration" prefHeight="27.0" prefWidth="114.0" style="-fx-background-color: #6dbce1;" text="Register" textAlignment="CENTER" textFill="#262732">
+                    <font>
+                        <Font name="Calibri" size="16.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Label alignment="CENTER" layoutX="94.0" layoutY="469.0" prefHeight="45.0" prefWidth="256.0" text="Already have an Account?" textFill="#b8cdd7" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Button alignment="CENTER" contentDisplay="TOP" layoutX="153.0" layoutY="524.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="27.0" prefWidth="114.0" style="-fx-background-color: #76bde1#6dbce1;" text="Log in" textAlignment="CENTER" textFill="#262732">
+                    <font>
+                        <Font name="Calibri" size="16.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <PasswordField fx:id="password" layoutX="123.0" layoutY="302.0" prefHeight="34.0" prefWidth="174.0" promptText="Password" style="-fx-background-color: #3a3c4a; -fx-prompt-text-fill: #b8cdd7; -fx-text-fill: #b8cdd7;">
+                    <font>
+                        <Font name="Calibri" size="16.0" />
+                    </font>
+                </PasswordField>
+            <Label fx:id="status" alignment="CENTER" layoutX="67.0" layoutY="348.0" prefHeight="28.0" prefWidth="287.0" textFill="#b8cdd7">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="67.0" layoutY="42.0" prefHeight="63.0" prefWidth="287.0" text="FPP" textFill="#b8cdd7" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="67.0" layoutY="108.0" prefHeight="35.0" prefWidth="287.0" text="a project by Tom &amp; Merle" textFill="#b8cdd7" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Line endX="131.0" layoutX="213.0" layoutY="109.0" startX="-138.0" stroke="#b8cdd7" strokeWidth="3.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

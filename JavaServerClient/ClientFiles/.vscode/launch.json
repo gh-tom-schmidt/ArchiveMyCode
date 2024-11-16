@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GuiController",
+            "request": "launch",
+            "mainClass": "main.GuiController",
+            "projectName": "ClientFiles_43828684",
+            "vmArgs": "--module-path lib/JavaFX --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
