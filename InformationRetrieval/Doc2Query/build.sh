@@ -6,16 +6,31 @@ echo "------------------------------------------------------------"
 echo ""
 echo "This script will install the following packages:"
 echo "- ir-datasets"
-echo "- tira"
-echo "- python-terrier"
+echo "- tira>=0.0.139"
+echo "- python-terrier==0.10.0"
 echo "- pyterrier_doc2query"
 echo ""
 echo "Script written by Tom Schmidt"
+echo "Last updated: 13.01.2024"
+echo ""
 echo "------------------------------------------------------------"
 echo "DISCLAIMER:"
 echo "By running this script, you acknowledge that errors may occur during installation."
 echo "These errors may be due to system configurations, package versions, or other factors."
 echo "The script author is not responsible for any issues that arise during or after the installation."
+echo ""
+echo "------------------------------------------------------------"
+echo "IMPORTANT NOTE:"
+echo "Do NOT change the version of the following packages:"
+echo "- python-terrier==0.10.0"
+echo "- tira>=0.0.139"
+echo ""
+echo "Changing package versions can lead to conflicts with the Python-Terrier and TIRA installations."
+echo "At the current moment, both of these files are required and will not be downloaded with newer versions:"
+echo "  - terrier-assemblies-5.7-jar-with-dependencies.jar"
+echo "  - terrier-python-helper-0.0.7.jar"
+echo ""
+echo "------------------------------------------------------------"
 echo ""
 
 # --------------------- CHECK DEPENDECIES ----------------------------
@@ -27,7 +42,7 @@ check_installed() {
         echo "$1 is installed."
     else
         echo "$1 is not installed."
-        return 1
+        exit 1
     fi
 }
 
@@ -52,7 +67,7 @@ else
         echo "JAVA_HOME is set to $JAVA_HOME."
     else
         echo "java-11-openjdk is not installed in /usr/lib/jvm. Exiting script."
-        return 1
+        exit 1
     fi
 
 fi
@@ -65,7 +80,7 @@ export CFLAGS="-fpermissive"
 # build env
 if [ -d "./env" ]; then
     echo "The virtual enviroment "env" is already installed."
-    return 1
+    exit 1
 else
     # build env
     echo "Create virtual enviroment (env)."
@@ -75,5 +90,5 @@ else
     source env/bin/activate
     # install packeges
     echo "Install packeges into the virtual enviroment (env)."
-    pip install ir-datasets tira python-terrier git+https://github.com/terrierteam/pyterrier_doc2query.git 
+    pip install ir-datasets 'tira>=0.0.139' 'python-terrier==0.10.0' git+https://github.com/terrierteam/pyterrier_doc2query.git 
 fi
