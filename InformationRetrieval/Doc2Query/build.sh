@@ -42,14 +42,23 @@ check_installed() {
         echo "$1 is installed."
     else
         echo "$1 is not installed."
-        exit 1
+        return 1
     fi
 }
 
 # check for dependecies
 check_installed gcc
+if [ $? -ne 0 ]; then
+  return 1 
+fi
 check_installed cmake
+if [ $? -ne 0 ]; then
+  return 1 
+fi
 check_installed python
+if [ $? -ne 0 ]; then
+  return 1 
+fi
 
 # check for Java 11 (java-11-openjdk) used by pyjnius 
 # check current installation
@@ -67,7 +76,7 @@ else
         echo "JAVA_HOME is set to $JAVA_HOME."
     else
         echo "java-11-openjdk is not installed in /usr/lib/jvm. Exiting script."
-        exit 1
+        return 1
     fi
 
 fi
@@ -80,7 +89,7 @@ export CFLAGS="-fpermissive"
 # build env
 if [ -d "./env" ]; then
     echo "The virtual enviroment "env" is already installed."
-    exit 1
+    return 1
 else
     # build env
     echo "Create virtual enviroment (env)."
